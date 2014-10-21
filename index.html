@@ -1,1 +1,37 @@
-"hello world;)" 
+<html>
+<head>
+    <title>ndxbxrme</title>
+    <style type="text/css">
+        html, body {
+            background: white;
+            text-align: center;
+        }
+        svg {
+            text-shadow: 6px 6px 10px #ccc;
+            width: 400px;
+            margin: 0 auto;
+        }
+        p {
+            font-family: "Lucida Sans Typewriter", "Lucida Console", Monaco, "Bitstream Vera Sans Mono", monospace;
+            opacity: 0.4;
+        }   
+    </style>
+</head>
+<body>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="420" height="130">
+        <title>ndxbxrme</title>
+        <defs>
+            <pattern patternUnits="userSpaceOnUse" id="pat1" x="10" y="10" 
+            width="200" height="200">
+                <image width="200" height="200" 
+                xlink:href="http://placekitten.com/g/200/200" />
+            </pattern>
+            <text id="txt2" x="20" y="90" font-size="90">
+                ndxbxrme
+            </text>
+        </defs>
+        <use xlink:href="#txt2" fill="url(#pat1)" />
+    </svg>
+    <p>coder of things</p>
+</body>
+</html>
