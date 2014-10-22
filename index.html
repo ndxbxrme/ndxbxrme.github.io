@@ -2,41 +2,47 @@
 <head>
     <title>ndxbxrme</title>
     <style type="text/css">
-        html, body {
-            background: white;
+        body {
+            background-image: url(https://unsplash.imgix.net/uploads%2F1411419068566071cef10%2F7562527b?q=75&w=1080&h=1080&fit=max&fm=jpg&auto=format&s=240c45655f09c546232a6f106688e502);
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        .logo {
             text-align: center;
-            background: #eee;
+            font-size: 10em;
+            line-height: 0.9em;
+            margin: 0px;
+            font-family: sans-serif;
+            color: rgba(255,255,255,0.7);
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%,-50%);
         }
-        svg {
-            text-shadow: 2px 2px 3px #bbb;
-            margin: 0 auto;
+
+        .logo span {
+            -webkit-filter: blur(2px);
+            transition: 2s ease-in-out all;
         }
-        p {
-            font-family: "Lucida Sans Typewriter", "Lucida Console", Monaco, "Bitstream Vera Sans Mono", monospace;
-            opacity: 0.4;
-            margin: 0 auto;
+
+        .logo .blur {
+            -webkit-filter: blur(8px);   
         }
-        iframe {
-            border: 14px solid #fff;  
-            border-radius: 4px;
-        }
+
     </style>
 </head>
 <body>
-    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="360" height="130">
-        <title>Hello</title>
-        <defs>
-            <pattern patternUnits="userSpaceOnUse" id="pat1" x="10" y="10" 
-            width="400" height="200">
-                <image width="400" height="200" 
-                xlink:href="https://unsplash.it/400/200/?random" />
-            </pattern>
-            <text id="txt2" x="20" y="100" font-size="90" style="letter-spacing:-2">
-                nd<tspan style="letter-spacing:-6">xbx</tspan>r<tspan style="letter-spacing:-6">me</tspan>
-            </text>
-        </defs>
-        <use xlink:href="#txt2" fill="url(#pat1)" mask="url(#pat1)" />
-    </svg>
-    <p>coder of things</p>
+    <div class="logo">ndxbxrme</div>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.6.1/jquery.lettering.min.js"></script>
+    <script>
+        $('.logo').lettering();
+        window.setInterval(function(){
+            var rnd = Math.floor(Math.random() * 8);
+            $('.logo .char' + rnd).removeClass('blur');
+            rnd = Math.floor(Math.random() * 8);
+            $('.logo .char' + rnd).addClass('blur');
+        }, 1000);   
+    </script>
 </body>
 </html>
